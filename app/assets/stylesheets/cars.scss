@@ -1,3 +1,19 @@
 // Place all the styles related to the cars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.teams-index-cards{
+    border: solid 1px black;
+    width: 290px;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: 5px;
+}
+
+.flex-div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
