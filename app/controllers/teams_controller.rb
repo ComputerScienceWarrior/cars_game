@@ -7,11 +7,6 @@ class TeamsController < ApplicationController
     end
 
     def show
-        if @team
-            redirect_to team_path(@team)
-        else
-            render :index
-        end
     end
 
     def new
