@@ -1,0 +1,10 @@
+<section class="flex-div">
+    <% @teams.each do |t| %>
+        <section class="teams-index-cards">
+            <label>Team Name:</label><%= t.name %><br/><br/>
+            <label>Team Wins:</label><%= t.total_wins %><br/><br/>
+            <label>Team Losses:</label><%= t.total_losses %><br/><br/>
+            <label>Team Rank:</label><%= t.rank %><br/><br/>
+        </section>
+    <% end %>
+</section>
