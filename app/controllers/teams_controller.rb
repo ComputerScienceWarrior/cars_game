@@ -3,7 +3,7 @@ class TeamsController < ApplicationController
     before_action :find_team, only: [:show, :edit, :update, :destroy]
 
     def index 
-        @team = Team.all
+        @teams = Team.all
     end
 
     def show
@@ -23,11 +23,6 @@ class TeamsController < ApplicationController
     end
 
     def edit
-        if @team
-            redirect_to edit_team_path(@team)
-        else
-            render :edit
-        end
     end
 
     def update
