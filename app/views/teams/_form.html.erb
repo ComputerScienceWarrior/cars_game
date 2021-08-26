@@ -1,5 +1,10 @@
-<% if params[:action] == 'new' %>
-    teams#new page
-<% elsif params[:action] == 'edit' %>
-    teams#edit page
-<% end %>
+<section class=new-edit-form>
+    <hr>
+    <%= form_for @team do |t| %>
+        <label>Name: </label><%= t.text_field :name , placeholder: "Team Name"%><br/><br/>
+        <label>Rank: </label><%= t.text_field :rank, placeholder: "Team Rank" %><br/><br/>
+        <label>Team Wins: </label><%= t.text_field :total_wins %><br/><br/>
+        <label>Team Losses: </label><%= t.text_field :total_losses %><br/><br/>
+        <%= t.submit %>
+    <% end %>
+</section>
