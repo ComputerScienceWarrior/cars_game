@@ -1,1 +1,15 @@
-cars#index page
+<section class="flex-div">
+    <% @cars.each do |t| %>
+        <section class="teams-index-cards">
+            <label>Racer Name:</label><%= t.name %><br/><br/>
+            <label>Level:</label><%= t.level %><br/><br/>
+            <label>Rank:</label><%= t.rank %><br/><br/>
+            <label>Wins:</label><%= t.wins %><br/><br/>
+            <label>Losses:</label><%= t.losses %><br/><br/>
+            <label>Attack Power:</label><%= t.attack %><br/><br/>
+            <label>Speed:</label><%= t.speed %><br/><br/>
+            <label>Durability:</label><%= t.durability %><br/><br/>
+            <label>EXP:</label><%= t.exp_points %><br/><br/>
+        </section>
+    <% end %>
+</section>
