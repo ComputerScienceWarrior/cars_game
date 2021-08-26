@@ -2,7 +2,8 @@ class CarsController < ApplicationController
     before_action :find_car, only: [:show, :edit, :update, :destroy]
 
     def index
-        @cars = Car.all
+        @team = Team.find(params[:team_id])
+        @cars = @team.cars
     end
 
     def show
@@ -15,7 +16,7 @@ class CarsController < ApplicationController
     def create
         @car = Car.new(car_params)
         if @car.save
-            redirect_to
+            redirect_to teams_car_path(@car, @car.team)
         else
             render :new
         end
@@ -26,7 +27,7 @@ class CarsController < ApplicationController
 
     def update
         if @car.update(car_params)
-            redirect_to car_path(@car)
+            redirect_to teams_car_path(@car)
         else
             render :edit
         end
