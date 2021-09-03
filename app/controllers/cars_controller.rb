@@ -42,7 +42,7 @@ class CarsController < ApplicationController
     private 
 
     def find_car
-        @car = Car.find(params[:id])
+        @car = Car.friendly.find(params[:id])
     end
 
     def car_params
