@@ -1,6 +1,6 @@
-# 10.times do |i|
-#     Team.create(name: "Best team ##{i + 1}", total_wins: i + 1, total_losses: 2, rank: i + 2)
-# end
+10.times do |i|
+    Team.create(name: "Best team ##{i + 1}", total_wins: i + 1, total_losses: 2, rank: i + 2)
+end
 
 car_names = ["King of the Road", "Blitzspeeder", "Purple Forward Force", "Green Forward Force", "Van #2", "Circle Tracker", "Van # 3", "Van # 1", "toolworx", "Retroactive"]
 
