@@ -1,2 +1,15 @@
 <h2>Create new Car:</h2>
-<%= render 'form' %>
+<section class=cars-new-edit-form>
+    <hr>
+    <%= form_for :car, url: "/teams/#{params[:team_id]}/cars" do |t| %>
+        <label>Name: </label><%= t.text_field :name , placeholder: "Car Name"%><br/><br/>
+        <label>Rank: </label><%= t.text_field :rank, placeholder: "Car Rank" %><br/><br/>
+        <label>Level: </label><%= t.text_field :level, placeholder: "Car Level" %><br/><br/>
+        <label>Durability: </label><%= t.text_field :durability, placeholder: "Car Durability" %><br/><br/>
+        <label>Speed: </label><%= t.text_field :speed, placeholder: "Car Speed" %><br/><br/>
+        <label>Wins: </label><%= t.text_field :wins, placeholder: "Car's Wins" %><br/><br/>
+        <label>Losses: </label><%= t.text_field :losses, placeholder: "Car's Losses" %><br/><br/>
+        <%=t.hidden_field :team_id, value: @team.id %>
+        <%= t.submit %>
+    <% end %>
+</section>
