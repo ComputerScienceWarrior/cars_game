@@ -2,7 +2,7 @@ class CarsController < ApplicationController
     before_action :find_car, only: [:show, :edit, :update, :destroy]
 
     def index
-        @team = Team.find(params[:team_id])
+        @team = Team.friendly.find(params[:team_id])
         @cars = @team.cars
     end
 
@@ -10,13 +10,13 @@ class CarsController < ApplicationController
     end
 
     def new 
-        @car = Car.new
+        @team = Team.friendly.find(params[:team_id])
     end
 
     def create
         @car = Car.new(car_params)
         if @car.save
-            redirect_to teams_car_path(@car, @car.team)
+            redirect_to team_car_path(@car.team, @car)
         else
             render :new
         end
