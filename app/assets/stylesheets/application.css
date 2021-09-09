@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
-
+ main{
+     display: flex;
+     justify-content: center;
+ }
  @import "cars";
- @import "teams"
+ @import "teams";
+

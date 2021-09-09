@@ -2,3 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.new-car-div{
+    width: fit-content;
+    text-align: center;
+    display: flex;
+}
+
+.new-car-form{
+    border: solid 1px black;
+    padding: 20px;
+}
+
+.new-car-form input{
+    border-radius: 5px;
+    padding: 2px;
+}
